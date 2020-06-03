@@ -1,0 +1,87 @@
+/* src: https://www.youtube.com/watch?v=F-KCncXMPk0 */
+body{
+    background: #E9E9E9;
+}
+.contenedor{
+    background: #FFF;
+    border: 10px solid #2C3E50;
+    height: 400px;
+    margin: 20px;
+    width: 400px;
+
+    /* flexbox */
+    display: flex;
+    /* row row-reverse column  column-reverse*/
+    flex-direction: row; 
+    /* 
+        Funciona cuándo el ancho de los elementos desbordan el padre,
+        de lo contrario no pasa nada.
+
+       no-wrap: Quedan en una linea horizontal, no respeta width
+       wrap: Repeta width y manda a los elementos abajo, tampoco el height del container
+       wrap-reverse
+    */
+    /* flex-wrap: no-wrap; */
+    /* flex-flow: column wrap; */
+
+
+    /* magia de flexbox 
+        flex-start
+        flex-end
+        center
+        space-around: distribuye por el ancho del padre equitativamente
+        space-between: Sin margenes al inicio ni al final
+    */
+    justify-content: center;
+
+    /* filas
+        align-items: Grupos de elementos en una fila
+         flex-end: posiciona en vertical abajo: Siempre abajo
+         center
+         stretch: height automatico: Usa el 100% del contenedor
+         baseline: Cambiando el font-size conserva el alineamiento de la fuente
+    */
+    align-items: center;
+
+    flex-wrap: no-wrap;
+    /* 
+        centrar columnas: wrap
+    */
+    /* align-content: center; */
+
+}
+
+.elemento{
+    background: #E67E22;
+    color:#FFF;
+    height: 50px;
+    margin: 5px;
+    text-align: center;
+    /* flex-basis => sinonimo width puede ser el alto */
+    width: 350px;
+    /* order: 2; */
+    /* flex-grow: 1;  */
+    /* 
+    el crecimiento que va a tener el elemento proporcionalmente
+    para que abarque todo
+    crece el doble: Cuánto queremos que crezca un contenedor con respecto a los demás
+    */
+
+    /* flex-shrink:1 ; se encoke */
+    /* flex-grow: 1; */
+    /* flex-basis: 350px; */
+
+    /* flex:1 1 350px; */ /*  flex-grow flex-shrink flex-basis */ 
+}
+
+.elemento3{
+    /* flex-grow: 1; */
+    /* flex-shrink:2; */
+    /* order: 3; */
+    height: auto;
+    align-self: stretch; /* flex-start flex-end  stretch */
+}
+
+/*
+    media queries para pasar de rows a columns
+*/
